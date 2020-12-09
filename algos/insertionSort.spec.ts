@@ -1,4 +1,5 @@
-import { Comparator, insertionSort } from "./insertionSort.ts";
+import { insertionSort } from "./insertionSort.ts";
+import { Comparator } from './comparators.ts';
 import { assertEquals } from "https://deno.land/std@0.79.0/testing/asserts.ts";
 
 const descendingOrderComparator: Comparator = (a, b) => b - a;

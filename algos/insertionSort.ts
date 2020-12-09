@@ -1,7 +1,9 @@
-export type Comparator = (a: number, b: number) => number;
-const defaultComparator: Comparator = (a , b) => a - b;
+import { Comparator, ascendingComparator } from './comparators.ts';
 
-export function insertionSort(input: number[], comparator: Comparator = defaultComparator) : number[] {
+export function insertionSort(
+    input: number[],
+    comparator: Comparator = ascendingComparator
+) : number[] {
     const output = Array.from(input);
     for (
         let nextToInsert = 1;
